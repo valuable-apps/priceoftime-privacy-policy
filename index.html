@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Price of Time</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f8f9fa;
+      color: #1c1c1e;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 20px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #1c1c1e;
+    }
+
+    header span.app {
+      color: #d97706;
+    }
+
+    .lang-switch {
+      margin-top: 8px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .lang-btn {
+      background: none;
+      border: 1px solid #d1d5db;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 13px;
+      cursor: pointer;
+      color: #6b7280;
+      transition: all 0.15s;
+    }
+
+    .lang-btn.active {
+      background: #FFD93D;
+      border-color: #FFD93D;
+      color: #1c1c1e;
+      font-weight: 700;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #8e8e93;
+      margin-bottom: 32px;
+    }
+
+    .intro {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      font-size: 15px;
+      color: #374151;
+    }
+
+    section {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    section h2 {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #6b7280;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    section p {
+      font-size: 15px;
+      color: #374151;
+      margin-bottom: 12px;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    section ul {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 12px;
+    }
+
+    section ul li {
+      font-size: 15px;
+      color: #374151;
+      padding: 6px 0 6px 20px;
+      position: relative;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    section ul li:last-child { border-bottom: none; }
+
+    section ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #d97706;
+      font-weight: bold;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #FFF9E5;
+      color: #92400e;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border-radius: 6px;
+      padding: 2px 8px;
+      margin-bottom: 10px;
+    }
+
+    .tag.red {
+      background: #FEF2F2;
+      color: #991b1b;
+    }
+
+    .tag.blue {
+      background: #EFF6FF;
+      color: #1e40af;
+    }
+
+    .tag.green {
+      background: #F0FDF4;
+      color: #166534;
+    }
+
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .right-item {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    .right-item strong {
+      display: block;
+      font-size: 13px;
+      color: #1c1c1e;
+      margin-bottom: 4px;
+    }
+
+    .right-item span {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    a { color: #d97706; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .contact-box {
+      background: #FFF9E5;
+      border: 1px solid #FCD34D;
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 15px;
+      color: #92400e;
+    }
+
+    .contact-box strong { display: block; margin-bottom: 4px; }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #9ca3af;
+      padding: 24px;
+    }
+
+    /* Language sections */
+    .lang-en, .lang-ru { display: none; }
+    .lang-en.visible, .lang-ru.visible { display: block; }
+
+    @media (max-width: 600px) {
+      main { padding: 24px 16px 60px; }
+      section { padding: 18px; }
+      .rights-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>PRICE OF <span class="app">TIME</span></h1>
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="setLang('en')">English</button>
+    <button class="lang-btn" onclick="setLang('ru')">Русский</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ═══════════════════ ENGLISH ═══════════════════ -->
+  <div class="lang-en visible" id="content-en">
+
+    <p class="meta">Privacy Policy &nbsp;·&nbsp; Last updated: May 2026</p>
+
+    <div class="intro">
+      Price of Time ("we", "our", "the app") is committed to protecting your privacy. This Privacy Policy describes what personal data we collect, how we use it, and your rights regarding that data.
+    </div>
+
+    <section>
+      <h2>1. Data Controller</h2>
+      <p>The data controller responsible for your personal data is:</p>
+      <p><strong>Price of Time</strong><br>
+      Contact email: <a href="mailto:support@priceofti.me">support@priceofti.me</a></p>
+    </section>
+
+    <section>
+      <h2>2. Data We Collect</h2>
+
+      <div class="tag">Account Data</div>
+      <p>When you register or sign in via Google or Facebook, we collect your <strong>name</strong> and <strong>email address</strong>. Legal basis: performance of contract (GDPR Art. 6(1)(b)).</p>
+
+      <div class="tag">Financial Data</div>
+      <p>You voluntarily enter your <strong>salary, working hours, and monthly expenses</strong>. This data is stored locally on your device and optionally synced to Google Firebase Firestore to enable multi-device access. Legal basis: performance of contract and your consent (GDPR Art. 6(1)(b) and 6(1)(a)).</p>
+
+      <div class="tag">Purchase History</div>
+      <p>Items you scan or manually enter (price, category, work-time equivalent, decision) are stored locally and optionally synced to the cloud. Legal basis: performance of contract (GDPR Art. 6(1)(b)).</p>
+
+      <div class="tag red">Advertising Data (Free Tier)</div>
+      <p>The free version of the app displays advertisements served by <strong>Google AdMob</strong>. AdMob may collect and process data including device identifiers, IP address, and ad interaction data to serve personalized or non-personalized ads. You can opt out of personalized advertising in your device settings (<em>Settings → Google → Ads → Opt out of Ads Personalization</em>). See <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> for details. <strong>Premium subscribers do not see ads.</strong></p>
+
+      <div class="tag blue">Payment Data</div>
+      <p>Premium subscriptions are processed exclusively by <strong>Google Play Billing</strong>. We do not collect or store your payment card details. See <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank">Google Payments Privacy Policy</a>.</p>
+    </section>
+
+    <section>
+      <h2>3. How We Use Your Data</h2>
+      <ul>
+        <li>To provide the app's core functionality (converting prices to work-time equivalents)</li>
+        <li>To sync your data across your devices (if cloud sync is enabled)</li>
+        <li>To track your savings goals and display statistics</li>
+        <li>To send optional daily motivational notifications (only if enabled by you)</li>
+        <li>To serve advertisements in the free tier via Google AdMob</li>
+        <li>To process Premium subscription payments via Google Play Billing</li>
+      </ul>
+      <p>We do <strong>not</strong> sell, share, or use your personal data for any purpose other than those listed above.</p>
+    </section>
+
+    <section>
+      <h2>4. Third-Party Services</h2>
+      <ul>
+        <li><strong>Firebase Authentication & Firestore</strong> (Google LLC) — user authentication and cloud data storage</li>
+        <li><strong>Google Sign-In</strong> (Google LLC) — optional social login</li>
+        <li><strong>Facebook Login</strong> (Meta Platforms, Inc.) — optional social login</li>
+        <li><strong>Google AdMob</strong> (Google LLC) — advertising in the free tier</li>
+        <li><strong>Google Play Billing</strong> (Google LLC) — Premium subscription payments</li>
+        <li><strong>ML Kit</strong> (Google LLC) — on-device text recognition for scanning price tags (no data is sent to Google servers)</li>
+      </ul>
+      <p>Each service operates under its own privacy policy. We are not responsible for third-party data practices.</p>
+    </section>
+
+    <section>
+      <h2>5. International Data Transfers</h2>
+      <p>Your data may be transferred to and processed in the <strong>United States</strong> and other countries where Google LLC and Meta Platforms, Inc. maintain servers.</p>
+      <p>These transfers are subject to appropriate safeguards as required by the GDPR, including <strong>Standard Contractual Clauses (SCCs)</strong> approved by the European Commission. For more information, see <a href="https://privacy.google.com/businesses/gdprservices/" target="_blank">Google's GDPR commitments</a>.</p>
+    </section>
+
+    <section>
+      <h2>6. Data Retention</h2>
+      <ul>
+        <li><strong>Account & financial data</strong>: retained for as long as your account is active</li>
+        <li><strong>Purchase history</strong>: records older than 1 year are automatically deleted</li>
+        <li><strong>After account deletion</strong>: all personal data is deleted within 30 days</li>
+        <li><strong>Advertising data</strong>: governed by Google AdMob's own retention policies</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Data Security</h2>
+      <p>All data is transmitted over encrypted connections (HTTPS/TLS). Local data is stored in a private app database not accessible to other apps on your device. Cloud data is protected by Firebase security rules and Google infrastructure security.</p>
+    </section>
+
+    <section>
+      <h2>8. Your Rights (GDPR)</h2>
+      <p>If you are located in the European Economic Area (EEA) or United Kingdom, you have the following rights:</p>
+      <div class="rights-grid">
+        <div class="right-item">
+          <strong>Right of Access</strong>
+          <span>Request a copy of your personal data we hold</span>
+        </div>
+        <div class="right-item">
+          <strong>Right to Rectification</strong>
+          <span>Correct inaccurate or incomplete data</span>
+        </div>
+        <div class="right-item">
+          <strong>Right to Erasure</strong>
+          <span>Delete your account via Settings, or contact us</span>
+        </div>
+        <div class="right-item">
+          <strong>Right to Restriction</strong>
+          <span>Request that we limit processing of your data</span>
+        </div>
+        <div class="right-item">
+          <strong>Right to Data Portability</strong>
+          <span>Export your history as CSV (Premium) or request export by email</span>
+        </div>
+        <div class="right-item">
+          <strong>Right to Object</strong>
+          <span>Object to processing based on legitimate interests</span>
+        </div>
+        <div class="right-item">
+          <strong>Right to Withdraw Consent</strong>
+          <span>Withdraw consent at any time without affecting prior processing</span>
+        </div>
+        <div class="right-item">
+          <strong>Right to Complain</strong>
+          <span>Lodge a complaint with your national data protection authority (DPA)</span>
+        </div>
+      </div>
+      <p style="margin-top:16px;">To exercise any of these rights, contact us at <a href="mailto:support@priceofti.me">support@priceofti.me</a>. We will respond within 30 days.</p>
+    </section>
+
+    <section>
+      <h2>9. California Privacy Rights (CCPA)</h2>
+      <p>California residents have the right to:</p>
+      <ul>
+        <li>Know what personal information we collect and how it is used</li>
+        <li>Request deletion of their personal information</li>
+        <li>Opt out of the sale of personal information</li>
+        <li>Not be discriminated against for exercising these rights</li>
+      </ul>
+      <p>We do <strong>not sell</strong> personal information. To submit a CCPA request, contact <a href="mailto:support@priceofti.me">support@priceofti.me</a>.</p>
+    </section>
+
+    <section>
+      <h2>10. Children's Privacy</h2>
+      <p>The app is not directed at children under the age of <strong>13</strong> (or 16 in the EEA where required). We do not knowingly collect personal data from children. If you believe a child has provided us with personal data, please contact us immediately and we will delete it.</p>
+    </section>
+
+    <section>
+      <h2>11. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will notify you of significant changes via an in-app notice. The "Last updated" date at the top of this page reflects the most recent revision. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
+    </section>
+
+    <section>
+      <h2>12. Contact Us</h2>
+      <div class="contact-box">
+        <strong>Price of Time — Privacy Inquiries</strong>
+        Email: <a href="mailto:support@priceofti.me">support@priceofti.me</a><br>
+        We aim to respond to all privacy-related requests within <strong>30 days</strong>.
+      </div>
+    </section>
+
+  </div><!-- /lang-en -->
+
+
+  <!-- ═══════════════════ RUSSIAN ═══════════════════ -->
+  <div class="lang-ru" id="content-ru">
+
+    <p class="meta">Политика конфиденциальности &nbsp;·&nbsp; Последнее обновление: май 2026</p>
+
+    <div class="intro">
+      Price of Time («мы», «наше», «приложение») обязуется защищать вашу конфиденциальность. Настоящая Политика конфиденциальности описывает, какие персональные данные мы собираем, как используем и каковы ваши права в отношении этих данных.
+    </div>
+
+    <section>
+      <h2>1. Контролёр данных</h2>
+      <p>Контролёром ваших персональных данных является:</p>
+      <p><strong>Price of Time</strong><br>
+      Электронная почта: <a href="mailto:support@priceofti.me">support@priceofti.me</a></p>
+    </section>
+
+    <section>
+      <h2>2. Данные, которые мы собираем</h2>
+
+      <div class="tag">Данные аккаунта</div>
+      <p>При регистрации или входе через Google или Facebook мы получаем ваше <strong>имя</strong> и <strong>адрес электронной почты</strong>. Правовое основание: исполнение договора (GDPR ст. 6(1)(b)).</p>
+
+      <div class="tag">Финансовые данные</div>
+      <p>Вы добровольно вводите <strong>зарплату, рабочие часы и ежемесячные расходы</strong>. Эти данные хранятся локально на вашем устройстве и по желанию синхронизируются с Google Firebase Firestore. Правовое основание: исполнение договора и ваше согласие (GDPR ст. 6(1)(b) и 6(1)(a)).</p>
+
+      <div class="tag">История покупок</div>
+      <p>Отсканированные или введённые вами позиции (цена, категория, эквивалент рабочего времени, решение) хранятся локально и по желанию синхронизируются с облаком. Правовое основание: исполнение договора (GDPR ст. 6(1)(b)).</p>
+
+      <div class="tag red">Рекламные данные (бесплатная версия)</div>
+      <p>В бесплатной версии приложения показывается реклама от <strong>Google AdMob</strong>. AdMob может собирать и обрабатывать идентификаторы устройства, IP-адрес и данные о взаимодействии с рекламой. Вы можете отказаться от персонализированной рекламы в настройках устройства (<em>Настройки → Google → Реклама → Отказаться от персонализации рекламы</em>). Подробнее — в <a href="https://policies.google.com/privacy" target="_blank">Политике конфиденциальности Google</a>. <strong>Пользователи Premium рекламу не видят.</strong></p>
+
+      <div class="tag blue">Платёжные данные</div>
+      <p>Платежи за Premium-подписку обрабатываются исключительно через <strong>Google Play Billing</strong>. Мы не собираем и не храним данные ваших платёжных карт.</p>
+    </section>
+
+    <section>
+      <h2>3. Как мы используем ваши данные</h2>
+      <ul>
+        <li>Для обеспечения основного функционала приложения (перевод цены в рабочее время)</li>
+        <li>Для синхронизации данных между устройствами (при включённой облачной синхронизации)</li>
+        <li>Для отслеживания целей экономии и отображения статистики</li>
+        <li>Для отправки необязательных мотивационных уведомлений (только если включено вами)</li>
+        <li>Для показа рекламы в бесплатной версии через Google AdMob</li>
+        <li>Для обработки платежей за Premium через Google Play Billing</li>
+      </ul>
+      <p>Мы <strong>не продаём, не передаём</strong> и не используем ваши данные ни в каких иных целях.</p>
+    </section>
+
+    <section>
+      <h2>4. Сторонние сервисы</h2>
+      <ul>
+        <li><strong>Firebase Authentication & Firestore</strong> (Google LLC) — аутентификация и облачное хранение</li>
+        <li><strong>Google Sign-In</strong> (Google LLC) — необязательный вход через Google</li>
+        <li><strong>Facebook Login</strong> (Meta Platforms, Inc.) — необязательный вход через Facebook</li>
+        <li><strong>Google AdMob</strong> (Google LLC) — реклама в бесплатной версии</li>
+        <li><strong>Google Play Billing</strong> (Google LLC) — платежи за Premium-подписку</li>
+        <li><strong>ML Kit</strong> (Google LLC) — распознавание текста на ценниках на устройстве (данные не отправляются на серверы Google)</li>
+      </ul>
+      <p>Каждый сервис действует в соответствии со своей политикой конфиденциальности.</p>
+    </section>
+
+    <section>
+      <h2>5. Международная передача данных</h2>
+      <p>Ваши данные могут передаваться и обрабатываться в <strong>США</strong> и других странах, где Google LLC и Meta Platforms, Inc. располагают серверами.</p>
+      <p>Такие передачи осуществляются на основании <strong>Стандартных договорных положений (SCC)</strong>, утверждённых Европейской комиссией, или иных надлежащих гарантий, предусмотренных GDPR.</p>
+    </section>
+
+    <section>
+      <h2>6. Сроки хранения данных</h2>
+      <ul>
+        <li><strong>Данные аккаунта и финансовые данные</strong>: хранятся в течение всего срока действия аккаунта</li>
+        <li><strong>История покупок</strong>: записи старше 1 года удаляются автоматически</li>
+        <li><strong>После удаления аккаунта</strong>: все персональные данные удаляются в течение 30 дней</li>
+        <li><strong>Рекламные данные</strong>: определяются политикой хранения Google AdMob</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Безопасность данных</h2>
+      <p>Все данные передаются по зашифрованным соединениям (HTTPS/TLS). Локальные данные хранятся в приватной базе приложения, недоступной другим приложениям на устройстве. Облачные данные защищены правилами безопасности Firebase и инфраструктурой Google.</p>
+    </section>
+
+    <section>
+      <h2>8. Ваши права (GDPR)</h2>
+      <p>Если вы находитесь в Европейской экономической зоне (ЕЭЗ) или Великобритании, вы имеете следующие права:</p>
+      <div class="rights-grid">
+        <div class="right-item">
+          <strong>Право на доступ</strong>
+          <span>Запросить копию ваших персональных данных</span>
+        </div>
+        <div class="right-item">
+          <strong>Право на исправление</strong>
+          <span>Исправить неточные или неполные данные</span>
+        </div>
+        <div class="right-item">
+          <strong>Право на удаление</strong>
+          <span>Удалить аккаунт через Настройки или написать нам</span>
+        </div>
+        <div class="right-item">
+          <strong>Право на ограничение</strong>
+          <span>Запросить ограничение обработки ваших данных</span>
+        </div>
+        <div class="right-item">
+          <strong>Право на переносимость</strong>
+          <span>Экспорт истории в CSV (Premium) или запрос по email</span>
+        </div>
+        <div class="right-item">
+          <strong>Право на возражение</strong>
+          <span>Возразить против обработки на основании законных интересов</span>
+        </div>
+        <div class="right-item">
+          <strong>Отзыв согласия</strong>
+          <span>Отозвать согласие в любое время без влияния на прошлую обработку</span>
+        </div>
+        <div class="right-item">
+          <strong>Право на жалобу</strong>
+          <span>Обратиться в национальный орган по защите данных (DPA)</span>
+        </div>
+      </div>
+      <p style="margin-top:16px;">Для реализации любого из прав свяжитесь с нами по адресу <a href="mailto:support@priceofti.me">support@priceofti.me</a>. Мы отвечаем в течение 30 дней.</p>
+    </section>
+
+    <section>
+      <h2>9. Права жителей Калифорнии (CCPA)</h2>
+      <p>Жители Калифорнии имеют право:</p>
+      <ul>
+        <li>Знать, какие персональные данные мы собираем и как используем</li>
+        <li>Запросить удаление своих персональных данных</li>
+        <li>Отказаться от продажи персональных данных</li>
+        <li>Не подвергаться дискриминации за реализацию этих прав</li>
+      </ul>
+      <p>Мы <strong>не продаём</strong> персональные данные. Для подачи запроса CCPA: <a href="mailto:support@priceofti.me">support@priceofti.me</a>.</p>
+    </section>
+
+    <section>
+      <h2>10. Защита детей</h2>
+      <p>Приложение не предназначено для детей младше <strong>13 лет</strong> (в ЕЭЗ — 16 лет там, где это требуется). Мы намеренно не собираем персональные данные детей. Если вы считаете, что ребёнок предоставил нам свои данные — сообщите нам немедленно, и мы их удалим.</p>
+    </section>
+
+    <section>
+      <h2>11. Изменения в политике</h2>
+      <p>Мы можем периодически обновлять настоящую Политику конфиденциальности. О существенных изменениях мы уведомим в приложении. Дата «Последнее обновление» в начале страницы отражает самую последнюю редакцию.</p>
+    </section>
+
+    <section>
+      <h2>12. Свяжитесь с нами</h2>
+      <div class="contact-box">
+        <strong>Price of Time — вопросы конфиденциальности</strong>
+        Email: <a href="mailto:support@priceofti.me">support@priceofti.me</a><br>
+        Мы стремимся отвечать на все запросы в течение <strong>30 дней</strong>.
+      </div>
+    </section>
+
+  </div><!-- /lang-ru -->
+
+</main>
+
+<footer>
+  © 2026 Price of Time. All rights reserved.
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-en, .lang-ru').forEach(el => el.classList.remove('visible'));
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById('content-' + lang).classList.add('visible');
+    event.target.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
