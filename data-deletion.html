@@ -11,16 +11,10 @@
     header {
       position: sticky; top: 0; z-index: 100;
       background: #fff; border-bottom: 1px solid #e5e7eb;
-      padding: 14px 20px; display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 20px;
     }
     .logo { font-size: 15px; font-weight: 800; letter-spacing: 2px; color: #1c1c1e; text-decoration: none; }
     .logo span { color: #f59e0b; }
-    .lang-toggle { display: flex; gap: 6px; }
-    .lang-btn {
-      padding: 5px 14px; border-radius: 20px; border: 1px solid #e5e7eb;
-      background: transparent; font-size: 13px; font-weight: 600; cursor: pointer; color: #6b7280; transition: all .15s;
-    }
-    .lang-btn.active { background: #1c1c1e; color: #fff; border-color: #1c1c1e; }
 
     main { max-width: 760px; margin: 0 auto; padding: 40px 20px 60px; }
 
@@ -51,14 +45,8 @@
     .del { color: #ef4444; font-weight: 600; }
     .kept { color: #6b7280; }
 
-    .divider { border: none; border-top: 1px solid #e5e7eb; margin: 24px 0; }
-
     a { color: #f59e0b; text-decoration: none; font-weight: 600; }
     a:hover { text-decoration: underline; }
-
-    [lang="ru"] { display: none; }
-    [lang="ru"].show { display: block; }
-    [lang="en"].hide { display: none; }
 
     @media (max-width: 600px) {
       .page-title { font-size: 22px; }
@@ -69,187 +57,91 @@
 <body>
 
 <header>
-  <a class="logo" href="https://buddy-yeg.github.io/priceoftime-privacy-policy/">PRICE OF <span>TIME</span></a>
-  <div class="lang-toggle">
-    <button class="lang-btn active" onclick="setLang('en')">EN</button>
-    <button class="lang-btn" onclick="setLang('ru')">RU</button>
-  </div>
+  <a class="logo" href="https://valuable-apps.github.io/priceoftime-privacy-policy/">PRICE OF <span>TIME</span></a>
 </header>
 
 <main>
 
-  <!-- ─── ENGLISH ─── -->
-  <div lang="en">
-    <p class="page-title">Data Deletion</p>
-    <p class="page-meta">App: Price of Time &nbsp;·&nbsp; Last updated: June 2026</p>
+  <p class="page-title">Data Deletion</p>
+  <p class="page-meta">App: Price of Time &nbsp;·&nbsp; Last updated: June 2026</p>
 
-    <div class="card">
-      <h2>Option 1 — Delete account &amp; all data in-app <span class="badge badge-recommended">RECOMMENDED</span></h2>
-      <p>You can permanently delete your account and all associated data directly inside the app:</p>
-      <ol>
-        <li>Open <strong>Price of Time</strong></li>
-        <li>Tap <strong>More</strong> (bottom navigation)</li>
-        <li>Tap <strong>Settings</strong></li>
-        <li>Scroll to the bottom and tap <strong>Delete account</strong></li>
-        <li>Confirm deletion in the dialog</li>
-      </ol>
-    </div>
-
-    <div class="card">
-      <h2>Option 2 — Delete individual records <span class="badge badge-optional">OPTIONAL</span></h2>
-      <p>To delete specific purchase records without deleting your account:</p>
-      <ol>
-        <li>Open <strong>Price of Time</strong></li>
-        <li>Tap <strong>More → History</strong></li>
-        <li>Select a record and tap the delete icon</li>
-      </ol>
-    </div>
-
-    <div class="card">
-      <h2>Option 3 — Email request</h2>
-      <p>If you cannot access the app, send a deletion request to:</p>
-      <p><a href="mailto:priceoftimesupport@gmail.com">priceoftimesupport@gmail.com</a></p>
-      <p>Subject: <strong>Data Deletion Request</strong><br>
-      Include your registered email address. We will process your request within <strong>30 days</strong>.</p>
-    </div>
-
-    <div class="card">
-      <h2>What data is deleted and what is retained</h2>
-      <table class="data-table">
-        <tr>
-          <th>Data type</th>
-          <th>Deleted immediately</th>
-          <th>Retention period</th>
-        </tr>
-        <tr>
-          <td>Firebase account (email / social login)</td>
-          <td class="del">✓ Deleted</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>Purchase history (saved, bought, postponed)</td>
-          <td class="del">✓ Deleted</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>Goals &amp; progress</td>
-          <td class="del">✓ Deleted</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>Statistics</td>
-          <td class="del">✓ Deleted</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>Profile (name, salary, country, currency)</td>
-          <td class="del">✓ Deleted</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>Anonymised analytics (Google AdMob, Firebase Analytics)</td>
-          <td class="kept">Retained by Google</td>
-          <td>Per Google's policy</td>
-        </tr>
-        <tr>
-          <td>Purchase transaction records (Google Play Billing)</td>
-          <td class="kept">Retained by Google</td>
-          <td>Per Google's policy</td>
-        </tr>
-      </table>
-    </div>
+  <div class="card">
+    <h2>Option 1 — Delete account &amp; all data in-app <span class="badge badge-recommended">RECOMMENDED</span></h2>
+    <p>You can permanently delete your account and all associated data directly inside the app:</p>
+    <ol>
+      <li>Open <strong>Price of Time</strong></li>
+      <li>Tap <strong>More</strong> (bottom navigation)</li>
+      <li>Tap <strong>Settings</strong></li>
+      <li>Scroll to the bottom and tap <strong>Delete account</strong></li>
+      <li>Confirm deletion in the dialog</li>
+    </ol>
   </div>
 
-  <!-- ─── RUSSIAN ─── -->
-  <div lang="ru">
-    <p class="page-title">Удаление данных</p>
-    <p class="page-meta">Приложение: Price of Time &nbsp;·&nbsp; Обновлено: июнь 2026</p>
+  <div class="card">
+    <h2>Option 2 — Delete individual records <span class="badge badge-optional">OPTIONAL</span></h2>
+    <p>To delete specific purchase records without deleting your account:</p>
+    <ol>
+      <li>Open <strong>Price of Time</strong></li>
+      <li>Tap <strong>More → History</strong></li>
+      <li>Select a record and tap the delete icon</li>
+    </ol>
+  </div>
 
-    <div class="card">
-      <h2>Способ 1 — Удаление аккаунта и всех данных в приложении <span class="badge badge-recommended">РЕКОМЕНДУЕТСЯ</span></h2>
-      <p>Вы можете безвозвратно удалить аккаунт и все связанные данные прямо в приложении:</p>
-      <ol>
-        <li>Откройте <strong>Price of Time</strong></li>
-        <li>Нажмите <strong>Ещё</strong> (нижняя навигация)</li>
-        <li>Нажмите <strong>Настройки</strong></li>
-        <li>Прокрутите вниз и нажмите <strong>Удалить аккаунт</strong></li>
-        <li>Подтвердите удаление в диалоговом окне</li>
-      </ol>
-    </div>
+  <div class="card">
+    <h2>Option 3 — Email request</h2>
+    <p>If you cannot access the app, send a deletion request to:</p>
+    <p><a href="mailto:priceoftimesupport@gmail.com">priceoftimesupport@gmail.com</a></p>
+    <p>Subject: <strong>Data Deletion Request</strong><br>
+    Include your registered email address. We will process your request within <strong>30 days</strong>.</p>
+  </div>
 
-    <div class="card">
-      <h2>Способ 2 — Удаление отдельных записей <span class="badge badge-optional">ОПЦИОНАЛЬНО</span></h2>
-      <p>Чтобы удалить конкретные записи о покупках без удаления аккаунта:</p>
-      <ol>
-        <li>Откройте <strong>Price of Time</strong></li>
-        <li>Перейдите в <strong>Ещё → История</strong></li>
-        <li>Выберите запись и нажмите значок удаления</li>
-      </ol>
-    </div>
-
-    <div class="card">
-      <h2>Способ 3 — Запрос по электронной почте</h2>
-      <p>Если доступ к приложению невозможен, отправьте запрос на:</p>
-      <p><a href="mailto:priceoftimesupport@gmail.com">priceoftimesupport@gmail.com</a></p>
-      <p>Тема письма: <strong>Запрос на удаление данных</strong><br>
-      Укажите зарегистрированный email. Запрос будет обработан в течение <strong>30 дней</strong>.</p>
-    </div>
-
-    <div class="card">
-      <h2>Что удаляется и что сохраняется</h2>
-      <table class="data-table">
-        <tr>
-          <th>Тип данных</th>
-          <th>Удаляется сразу</th>
-          <th>Срок хранения</th>
-        </tr>
-        <tr>
-          <td>Аккаунт Firebase (email / соцсети)</td>
-          <td class="del">✓ Удаляется</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>История покупок (сохранено, куплено, отложено)</td>
-          <td class="del">✓ Удаляется</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>Цели и прогресс</td>
-          <td class="del">✓ Удаляется</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>Статистика</td>
-          <td class="del">✓ Удаляется</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>Профиль (имя, зарплата, страна, валюта)</td>
-          <td class="del">✓ Удаляется</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>Анонимная аналитика (Google AdMob, Firebase Analytics)</td>
-          <td class="kept">Хранится у Google</td>
-          <td>По политике Google</td>
-        </tr>
-        <tr>
-          <td>Записи транзакций (Google Play Billing)</td>
-          <td class="kept">Хранится у Google</td>
-          <td>По политике Google</td>
-        </tr>
-      </table>
-    </div>
+  <div class="card">
+    <h2>What data is deleted and what is retained</h2>
+    <table class="data-table">
+      <tr>
+        <th>Data type</th>
+        <th>Deleted immediately</th>
+        <th>Retention period</th>
+      </tr>
+      <tr>
+        <td>Firebase account (email / social login)</td>
+        <td class="del">✓ Deleted</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Purchase history (saved, bought, postponed)</td>
+        <td class="del">✓ Deleted</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Goals &amp; progress</td>
+        <td class="del">✓ Deleted</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Statistics</td>
+        <td class="del">✓ Deleted</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Profile (name, salary, country, currency)</td>
+        <td class="del">✓ Deleted</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Anonymised analytics (Google AdMob, Firebase Analytics)</td>
+        <td class="kept">Retained by Google</td>
+        <td>Per Google's policy</td>
+      </tr>
+      <tr>
+        <td>Purchase transaction records (Google Play Billing)</td>
+        <td class="kept">Retained by Google</td>
+        <td>Per Google's policy</td>
+      </tr>
+    </table>
   </div>
 
 </main>
 
-<script>
-  function setLang(lang) {
-    document.querySelectorAll('[lang="en"]').forEach(el => el.classList.toggle('hide', lang !== 'en'));
-    document.querySelectorAll('[lang="ru"]').forEach(el => el.classList.toggle('show', lang === 'ru'));
-    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.textContent === lang.toUpperCase()));
-  }
-</script>
 </body>
 </html>
